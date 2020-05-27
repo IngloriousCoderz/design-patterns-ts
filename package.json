@@ -1,0 +1,26 @@
+{
+  "name": "design-patterns-ts",
+  "version": "1.0.0",
+  "description": "A TypeScript port of the Java project about design patterns.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngloriousCoderz/design-patterns-ts.git"
+  },
+  "author": "Matteo Antony Mistretta <antony.mistretta@gmail.com> (https://www.ingloriouscoderz.it)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IngloriousCoderz/design-patterns-ts/issues"
+  },
+  "homepage": "https://github.com/IngloriousCoderz/design-patterns-ts#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  }
+}
