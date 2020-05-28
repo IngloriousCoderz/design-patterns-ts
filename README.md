@@ -19,9 +19,13 @@ The first case study, shown on slide no. 24. We can implement the different kind
 
 A smaller example, usually given as homework, which shows the slight difference between State and Strategy, and Decorator and Proxy, respectively.
 
+## Observer
+
+The second case study, shown on slide no. 32. It features the Observer Pattern in its simplest implementation.
+
 ## MVC
 
-The second case study, shown on slide no. 32. It features the Observer Pattern, The MVVM pattern (in which the ViewModel knows both Model and View), and the MVC pattern which uses Observer to let the Model update the View. A Model becomes Observable using the four different ways discussed in the previous examples.
+This example wraps it all up exploring the MV\* pattern as described in slide no. 33. In the MVVM pattern the ViewModel knows both Model and View, and in the MVC pattern the Model uses Observer to update the View indipendently. A Model becomes Observable using the four different ways discussed in the previous examples.
 
 # Installation
 

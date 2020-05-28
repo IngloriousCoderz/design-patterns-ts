@@ -1,6 +1,6 @@
 import { Observer } from "./Observer";
 
-export class Observable {
+export class Subject {
   private observers: Observer[];
 
   constructor() {

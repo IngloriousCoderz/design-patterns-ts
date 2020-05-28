@@ -1,5 +1,5 @@
 import { Model } from "../Model";
-import { Observer } from "../../observer/Observer";
+import { Observer } from "../../../observer/Observer";
 
 export class GodModel implements Model {
   private attribute: string;

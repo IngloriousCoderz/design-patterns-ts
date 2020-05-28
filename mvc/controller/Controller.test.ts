@@ -3,10 +3,10 @@ import { GodModel } from "../model/god/GodModel";
 import { View } from "../view/View";
 import { Controller } from "./Controller";
 import { ObservableModel } from "../model/inheritance/ObservableModel";
-import { Observable } from "../observer/Observable";
-import { ModelWithObservable } from "../model/strategy/ModelWithObservable";
+import { ModelWithSubject } from "../model/strategy/ModelWithSubject";
 import { ObservableDecorator } from "../model/decorator/ObservableDecorator";
 import { BaseModel } from "../model/BaseModel";
+import { Subject } from "../../observer/Subject";
 
 describe("Controller", () => {
   it("should let the model notify the view (God)", () => {
@@ -33,7 +33,7 @@ describe("Controller", () => {
 
     const view: View = new View();
     // @ts-ignore
-    (model as Observable).addObserver(view);
+    (model as Subject).addObserver(view);
 
     const controller: Controller = new Controller();
     controller.setModel(model);
@@ -48,10 +48,10 @@ describe("Controller", () => {
 
   it("should let the model notify the view (Strategy)", () => {
     // given
-    const model: Model = new ModelWithObservable();
+    const model: Model = new ModelWithSubject();
 
     const view: View = new View();
-    (model as ModelWithObservable).addObserver(view);
+    (model as ModelWithSubject).addObserver(view);
 
     const controller: Controller = new Controller();
     controller.setModel(model);
@@ -71,7 +71,7 @@ describe("Controller", () => {
 
     const view: View = new View();
     // @ts-ignore
-    (model as Observable).addObserver(view);
+    (model as Subject).addObserver(view);
 
     const controller: Controller = new Controller();
     controller.setModel(model);

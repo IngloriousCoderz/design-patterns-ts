@@ -1,7 +1,7 @@
-import { Observable } from "../../observer/Observable";
+import { Subject } from "../../../observer/Subject";
 import { Model } from "../Model";
 
-export class ObservableDecorator extends Observable implements Model {
+export class ObservableDecorator extends Subject implements Model {
   private model: Model;
 
   constructor(model: Model) {

@@ -1,4 +1,4 @@
-import { Observer } from "../observer/Observer";
+import { Observer } from "../../observer/Observer";
 
 export class View implements Observer {
   private static TEMPLATE: string = "<h1>Hello ${variable}!</h1>";
