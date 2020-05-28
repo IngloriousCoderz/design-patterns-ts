@@ -1,15 +1,15 @@
 import { Mario } from "../Mario";
 import { KeyCode } from "../KeyCode";
-import { StatefulMario } from "./StatefulMario";
-import { BaseState } from "./BaseState";
-import { SuperState } from "./SuperState";
-import { FireState } from "./FireState";
-import { CapeState } from "./CapeState";
-import { PowerState } from "./PowerState";
+import { TypedMario } from "./TypedMario";
+import { BaseType } from "./BaseType";
+import { SuperType } from "./SuperType";
+import { FireType } from "./FireType";
+import { CapeType } from "./CapeType";
+import { PowerType } from "./PowerType";
 
-describe("State", () => {
+describe("Type", () => {
   it("should behave as Base Mario", () => {
-    const mario: Mario = new StatefulMario(new BaseState());
+    const mario: Mario = new BaseType().newMario();
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Jumping");
@@ -17,7 +17,7 @@ describe("State", () => {
   });
 
   it("should behave as Super Mario", () => {
-    const mario: Mario = new StatefulMario(new SuperState());
+    const mario: Mario = new SuperType().newMario();
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("Crashing");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Jumping");
@@ -25,7 +25,7 @@ describe("State", () => {
   });
 
   it("should behave as Fire Mario", () => {
-    const mario: Mario = new StatefulMario(new FireState());
+    const mario: Mario = new FireType().newMario();
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("Crashing");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Jumping");
@@ -33,7 +33,7 @@ describe("State", () => {
   });
 
   it("should behave as Cape Mario", () => {
-    const mario: Mario = new StatefulMario(new CapeState());
+    const mario: Mario = new CapeType().newMario();
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("Crashing");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Gliding");
@@ -41,7 +41,7 @@ describe("State", () => {
   });
 
   it("should behave as Power Mario", () => {
-    const mario: Mario = new StatefulMario(new PowerState());
+    const mario: Mario = new PowerType().newMario();
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("Crashing");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Gliding");

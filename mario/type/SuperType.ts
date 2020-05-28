@@ -1,7 +1,7 @@
-import { BaseState } from "./BaseState";
+import { BaseType } from "./BaseType";
 import { KeyCode } from "../KeyCode";
 
-export class SuperState extends BaseState {
+export class SuperType extends BaseType {
   onKeyPressed(keyCode: KeyCode): string {
     switch (keyCode) {
       case KeyCode.DOWN:
