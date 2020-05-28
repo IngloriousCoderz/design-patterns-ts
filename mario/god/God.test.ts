@@ -14,6 +14,9 @@ describe("God", () => {
 
   it("should behave as Super Mario", () => {
     const mario: Mario = new GodMario(Type.SUPER);
+    /* state transitions */
+    // const mario: Mario = new GodMario(Type.BASE);
+    // (mario as GodMario).setType(Type.SUPER);
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("Crashing");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Jumping");

@@ -3,17 +3,13 @@ import { KeyCode } from "../KeyCode";
 import { Type } from "./Type";
 
 export class TypedMario implements Mario {
-  private type: Type;
-
-  constructor(type: Type) {
-    this.type = type;
-  }
+  constructor(private type: Type) {}
 
   onKeyPressed(keyCode: KeyCode): string {
     return this.type.onKeyPressed(keyCode);
   }
 
-  setState(type: Type): void {
+  setType(type: Type): void {
     this.type = type;
   }
 }

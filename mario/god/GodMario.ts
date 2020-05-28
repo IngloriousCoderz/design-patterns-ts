@@ -3,11 +3,7 @@ import { Mario } from "../Mario";
 import { KeyCode } from "../KeyCode";
 
 export class GodMario implements Mario {
-  private type: Type;
-
-  constructor(type: Type) {
-    this.type = type;
-  }
+  constructor(private type: Type) {}
 
   setType(type: Type): void {
     this.type = type;

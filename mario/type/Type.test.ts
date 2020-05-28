@@ -1,6 +1,5 @@
 import { Mario } from "../Mario";
 import { KeyCode } from "../KeyCode";
-import { TypedMario } from "./TypedMario";
 import { BaseType } from "./BaseType";
 import { SuperType } from "./SuperType";
 import { FireType } from "./FireType";
@@ -18,6 +17,9 @@ describe("Type", () => {
 
   it("should behave as Super Mario", () => {
     const mario: Mario = new SuperType().newMario();
+    /* state transitions */
+    // const mario: Mario = new BaseType().newMario();
+    // (mario as TypedMario).setType(new SuperType());
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("Crashing");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Jumping");

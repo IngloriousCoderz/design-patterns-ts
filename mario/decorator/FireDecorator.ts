@@ -2,11 +2,7 @@ import { Mario } from "../Mario";
 import { KeyCode } from "../KeyCode";
 
 export class FireDecorator implements Mario {
-  private mario: Mario;
-
-  constructor(mario: Mario) {
-    this.mario = mario;
-  }
+  constructor(private mario: Mario) {}
 
   onKeyPressed(keyCode: KeyCode): string {
     switch (keyCode) {

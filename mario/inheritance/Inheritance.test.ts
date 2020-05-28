@@ -17,6 +17,9 @@ describe("Inheritance", () => {
 
   it("should behave as Super Mario", () => {
     const mario: Mario = new SuperMario();
+    /* state transitions */
+    // let mario: Mario = new BaseMario();
+    // mario = new SuperMario();
 
     expect(mario.onKeyPressed(KeyCode.DOWN)).toBe("Crashing");
     expect(mario.onKeyPressed(KeyCode.JUMP)).toBe("Jumping");

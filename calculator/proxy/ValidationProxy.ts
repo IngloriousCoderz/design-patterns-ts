@@ -1,11 +1,7 @@
 import { Calculator } from "../Calculator";
 
 export class ValidationProxy implements Calculator {
-  private calculator: Calculator;
-
-  constructor(calculator: Calculator) {
-    this.calculator = calculator;
-  }
+  constructor(private calculator: Calculator) {}
 
   sum(a: number, b: number): number {
     if (a == null || b == null) {

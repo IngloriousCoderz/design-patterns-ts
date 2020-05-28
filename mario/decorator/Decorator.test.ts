@@ -15,6 +15,7 @@ describe("Decorator", () => {
   });
 
   it("should behave as Super Mario", () => {
+    /* default behavior == state transitions */
     let mario: Mario = new BaseMario();
     mario = new SuperDecorator(mario);
 
